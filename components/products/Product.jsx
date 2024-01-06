@@ -14,10 +14,20 @@ const Product = ({ product }) => {
     router.replace(`/product/${id}`);
   };
 
+  const addToCartHandler = async () => {
+    const response = await fetch("/api/cart/addToCart", {
+      method: "POST",
+      body: JSON.stringify(product),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  };
+
   return (
     <div className={styles.product}>
       <div className={styles.image}>
-        <Image src={image} alt={title} width={500} height={500}/>
+        <Image src={image} alt={title} width={500} height={500} priority />
       </div>
       <div className={styles.productDetails}>
         <h3>{title}</h3>
@@ -30,7 +40,7 @@ const Product = ({ product }) => {
         </div>
         <div className={styles.action}>
           <button onClick={viewDetailsHandler}>View Details</button>
-          <button>Add to cart</button>
+          <button onClick={addToCartHandler}>Add to cart</button>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import ProductDetails from "@/components/products/ProductDetails";
 import React from "react";
-import { getProductById } from "../api/products/products";
+import { getProductById } from "../../lib/products";
 
 const ProductDetailsPage = ({ product }) => {
   return <ProductDetails product={product} />;

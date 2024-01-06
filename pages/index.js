@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { getAllProducts } from "./api/products/products";
+import { getAllProducts } from "../lib/products";
 import ProductsPage from "@/components/products/ProductsPage";
 
 const HomePage = ({ products }) => {

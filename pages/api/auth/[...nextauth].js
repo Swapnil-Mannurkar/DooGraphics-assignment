@@ -1,6 +1,6 @@
 import NextAuth from "next-auth/next";
 import Credentials from "next-auth/providers/credentials";
-import { connectDatabase, credentialsCollection } from "../../../lib/db";
+import { connectDatabase, usersCollection } from "../../../lib/db";
 import { verifyPassword } from "@/lib/auth";
 
 export const authOptions = {
@@ -11,7 +11,7 @@ export const authOptions = {
       async authorize(credentials) {
         const client = await connectDatabase();
 
-        const collection = await credentialsCollection(client);
+        const collection = await usersCollection(client);
 
         const user = await collection.findOne({ _id: credentials.username });
 

@@ -1,5 +1,5 @@
 import { encryptPassword } from "@/lib/auth";
-import { connectDatabase, credentialsCollection } from "../../../lib/db";
+import { connectDatabase, usersCollection } from "../../../lib/db";
 
 const handler = async (req, res) => {
   const method = req.method;
@@ -22,7 +22,7 @@ const handler = async (req, res) => {
   try {
     client = await connectDatabase();
 
-    const collection = await credentialsCollection(client);
+    const collection = await usersCollection(client);
 
     const existingUser = await collection.findOne({ _id: username });
 
