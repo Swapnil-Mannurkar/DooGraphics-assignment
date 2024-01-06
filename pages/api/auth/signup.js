@@ -42,7 +42,7 @@ const handler = async (req, res) => {
     await collection.insertOne({
       _id: username,
       password: encryptedPassword,
-      cart: [],
+      cart: { items: [], totalPrice: 0 },
     });
 
     client.close();

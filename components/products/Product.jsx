@@ -3,9 +3,12 @@ import styles from "./Product.module.css";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 
 const Product = ({ product }) => {
   const router = useRouter();
+  const { data, status } = useSession();
+
   const { id, title, price, description, category, image, rating } = {
     ...product,
   };
@@ -15,13 +18,19 @@ const Product = ({ product }) => {
   };
 
   const addToCartHandler = async () => {
+    const product = { id, title, price, image, quantity: 1 };
     const response = await fetch("/api/cart/addToCart", {
       method: "POST",
-      body: JSON.stringify(product),
+      body: JSON.stringify({ product: product, username: data.user.name }),
       headers: {
         "Content-Type": "application/json",
       },
     });
+
+    if (response.ok) {
+      console.log("product added");
+      // router.replace("/cart");
+    }
   };
 
   return (
