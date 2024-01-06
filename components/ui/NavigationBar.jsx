@@ -32,7 +32,12 @@ const NavigationBar = () => {
         <h1 className={styles.logo}>E-COMMERCE</h1>
       </Link>
       <div className={styles.navList}>
-        {session && <div>Hello {username}!</div>}
+        {session && (
+          <>
+            <div>Hello {username}!</div>
+            <Link href={"/cart"}>Cart</Link>
+          </>
+        )}
         <button onClick={loginLogoutClickHandler}>
           {session ? "Logout" : "Login"}
         </button>
