@@ -1,0 +1,41 @@
+.product {
+  @apply w-full bg-white shadow-md px-4 py-4 flex flex-col rounded-md;
+  @apply hover:scale-105 hover:cursor-pointer;
+}
+
+.image {
+  @apply w-full h-48 flex justify-center items-center;
+}
+
+.image img {
+  @apply w-28;
+}
+
+.productDetails {
+  @apply flex flex-col gap-1;
+}
+
+.productDetails h3 {
+  @apply w-full text-lg font-bold overflow-hidden overflow-ellipsis whitespace-nowrap;
+}
+
+.priceRating {
+  @apply flex justify-between items-center;
+}
+
+.priceRating h4 {
+  @apply text-3xl font-bold text-[#FF7B00] pl-2;
+}
+
+.rating {
+  @apply flex items-center gap-2;
+}
+
+.action {
+  @apply px-2 flex justify-between;
+}
+
+.action button {
+  @apply mt-2 border-2 border-solid border-[#ff7b00] px-2 py-1 rounded-md font-bold;
+  @apply hover:bg-[#ff7b00] hover:text-white;
+}
