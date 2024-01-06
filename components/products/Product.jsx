@@ -37,25 +37,28 @@ const Product = ({ product }) => {
   };
 
   return (
-    <div className={styles.product}>
-      <div className={styles.image}>
-        <Image src={image} alt={title} width={500} height={500} priority />
-      </div>
-      <div className={styles.productDetails}>
-        <h3>{title}</h3>
-        <div className={styles.priceRating}>
-          <h4>$ {price}</h4>
-          <p className={styles.rating}>
-            <FaStar className={"text-yellow-400"} /> {rating.rate} (
-            {rating.count})
-          </p>
+    <main className={styles.main}>
+      <div className={styles.product} onClick={viewDetailsHandler}>
+        <div className={styles.image}>
+          <Image src={image} alt={title} width={500} height={500} priority />
         </div>
-        <div className={styles.action}>
-          <button onClick={viewDetailsHandler}>View Details</button>
+        <div className={styles.productDetails}>
+          <h3>{title}</h3>
+          <div className={styles.priceRating}>
+            <h4>${price}</h4>
+            <p className={styles.rating}>
+              <FaStar className={"text-yellow-400"} /> {rating.rate} (
+              {rating.count})
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className={styles.action}>
+        {status !== "authenticated" && (
           <button onClick={addToCartHandler}>Add to cart</button>
-        </div>
+        )}
       </div>
-    </div>
+    </main>
   );
 };
 

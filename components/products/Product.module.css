@@ -1,5 +1,5 @@
-.product {
-  @apply w-full bg-white shadow-md flex flex-col rounded-md;
+.main {
+  @apply w-full bg-white shadow-md flex flex-col rounded-md pb-6;
   @apply hover:scale-105 hover:cursor-pointer;
 }
 
@@ -12,16 +12,16 @@
 }
 
 .productDetails {
-  @apply flex flex-col gap-2 px-4 py-4;
+  @apply flex flex-col gap-2 px-4;
 }
 
 .productDetails h3 {
-  @apply w-full text-lg font-bold overflow-hidden overflow-ellipsis whitespace-nowrap;
+  @apply w-full text-lg text-center font-bold overflow-hidden overflow-ellipsis whitespace-nowrap;
 }
 
 .priceRating {
   @apply flex justify-around items-center gap-4;
-  @apply lg:justify-between;
+  @apply lg:justify-center lg:gap-12;
 }
 
 .priceRating h4 {
@@ -33,12 +33,11 @@
 }
 
 .action {
-  @apply flex flex-col justify-around;
-  @apply lg:flex-row gap-0;
+  @apply flex justify-center;
 }
 
 .action button {
-  @apply mt-2 border-2 border-solid border-[#ff7b00] px-2 py-1 rounded-md font-bold uppercase;
-  @apply hover:bg-[#ff7b00] hover:text-white;
-  @apply xl:text-sm
+  @apply w-60 px-2 py-1 mt-2 border-2 border-solid border-gray-800;
+  @apply text-gray-800 rounded-md font-bold uppercase;
+  @apply hover:bg-gray-600 hover:text-white;
 }

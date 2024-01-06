@@ -20,7 +20,7 @@
 }
 
 .productDetail h3 {
-  @apply text-3xl font-bold text-[#FF7B00];
+  @apply text-5xl font-bold text-[#FF7B00];
 }
 
 .productDetail p {
@@ -28,6 +28,6 @@
 }
 
 .productDetail button {
-  @apply w-40 mt-2 border-2 border-solid border-[#ff7b00] px-2 py-1 rounded-md font-bold uppercase;
+  @apply w-40 mt-2 text-[#ff7b00] border-2 border-solid border-[#ff7b00] px-2 py-1 rounded-md font-bold uppercase;
   @apply hover:bg-[#ff7b00] hover:text-white;
 }
