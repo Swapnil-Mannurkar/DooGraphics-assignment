@@ -1,21 +1,6 @@
 .products {
-  @apply w-[90vw] mt-4 grid grid-cols-4 gap-12;
-}
-
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-  .products {
-    @apply w-[90vw] grid-cols-3 gap-6;
-  }
-}
-
-@media screen and (min-width: 501px) and (max-width: 900px) {
-  .products {
-    @apply grid-cols-2;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .products {
-    @apply grid-cols-1;
-  }
+  @apply w-[80vw] mt-10 pb-10 grid grid-cols-1 gap-6;
+  @apply md:grid-cols-2;
+  @apply lg:grid-cols-3 lg:w-[90vw];
+  @apply xl:grid-cols-4;
 }

@@ -1,0 +1,33 @@
+.main {
+  @apply w-[90vw] mt-6 pb-8 flex flex-col items-center;
+}
+
+.main h2 {
+  @apply w-full pb-4 mb-4 text-center text-2xl font-bold border-b-2 border-solid border-black;
+}
+
+.product {
+  @apply w-[70vw] grid grid-cols-1 gap-6;
+  @apply md:grid-cols-2;
+}
+
+.image {
+  @apply p-8 flex justify-center bg-white shadow-lg rounded-md;
+}
+
+.productDetail {
+  @apply flex flex-col justify-center items-center gap-4;
+}
+
+.productDetail h3 {
+  @apply text-3xl font-bold text-[#FF7B00];
+}
+
+.productDetail p {
+  @apply text-justify lg:px-12;
+}
+
+.productDetail button {
+  @apply w-40 mt-2 border-2 border-solid border-[#ff7b00] px-2 py-1 rounded-md font-bold uppercase;
+  @apply hover:bg-[#ff7b00] hover:text-white;
+}
