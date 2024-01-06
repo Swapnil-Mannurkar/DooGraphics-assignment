@@ -28,8 +28,7 @@ const Product = ({ product }) => {
     });
 
     if (response.ok) {
-      console.log("product added");
-      // router.replace("/cart");
+      router.replace("/cart");
     }
   };
 
