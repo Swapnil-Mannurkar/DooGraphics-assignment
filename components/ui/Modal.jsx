@@ -5,9 +5,7 @@ const Modal = (props) => {
   return (
     <>
       <div className={styles.modalBg} />
-      <div className={styles.modalContent}>
-        <h1>{props.message}</h1>
-      </div>
+      <div className={styles.modalContent}>{props.children}</div>
     </>
   );
 };

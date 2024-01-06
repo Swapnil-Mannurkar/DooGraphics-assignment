@@ -39,7 +39,11 @@ const handler = async (req, res) => {
 
     const encryptedPassword = await encryptPassword(password);
 
-    await collection.insertOne({ _id: username, password: encryptedPassword });
+    await collection.insertOne({
+      _id: username,
+      password: encryptedPassword,
+      cart: [],
+    });
 
     client.close();
     res.status(201).json({ message: "User created!", status: "success" });

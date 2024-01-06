@@ -78,11 +78,11 @@ const AuthForm = () => {
   return (
     <>
       {isLoading && (
-        <Modal
-          message={`${isLogin ? "Logging" : "Signing"} you ${
+        <Modal>
+          <h1>{`${isLogin ? "Logging" : "Signing"} you ${
             isLogin ? "in" : "up"
-          }...`}
-        />
+          }...`}</h1>
+        </Modal>
       )}
       <form className={styles.authForm} onSubmit={submitHandler}>
         <h1>{isLogin ? "LOGIN" : "SIGN UP"}</h1>
