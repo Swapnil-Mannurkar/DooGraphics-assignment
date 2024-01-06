@@ -1,5 +1,5 @@
 .product {
-  @apply w-full bg-white shadow-md px-4 py-4 flex flex-col rounded-md;
+  @apply w-full bg-white shadow-md flex flex-col rounded-md;
   @apply hover:scale-105 hover:cursor-pointer;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .productDetails {
-  @apply flex flex-col gap-1;
+  @apply flex flex-col gap-2 px-4 py-4;
 }
 
 .productDetails h3 {
@@ -20,19 +20,21 @@
 }
 
 .priceRating {
-  @apply flex justify-between items-center;
+  @apply flex justify-around items-center gap-4;
+  @apply lg:justify-between;
 }
 
 .priceRating h4 {
-  @apply text-3xl font-bold text-[#FF7B00] pl-2;
+  @apply text-3xl font-bold text-[#FF7B00];
 }
 
 .rating {
-  @apply flex items-center gap-2;
+  @apply flex items-center gap-1;
 }
 
 .action {
-  @apply px-2 flex justify-between;
+  @apply flex flex-col justify-around gap-2;
+  @apply lg:flex-row gap-0;
 }
 
 .action button {
