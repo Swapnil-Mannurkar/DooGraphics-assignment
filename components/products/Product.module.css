@@ -33,11 +33,12 @@
 }
 
 .action {
-  @apply flex flex-col justify-around gap-2;
+  @apply flex flex-col justify-around;
   @apply lg:flex-row gap-0;
 }
 
 .action button {
-  @apply mt-2 border-2 border-solid border-[#ff7b00] px-2 py-1 rounded-md font-bold;
+  @apply mt-2 border-2 border-solid border-[#ff7b00] px-2 py-1 rounded-md font-bold uppercase;
   @apply hover:bg-[#ff7b00] hover:text-white;
+  @apply xl:text-sm
 }

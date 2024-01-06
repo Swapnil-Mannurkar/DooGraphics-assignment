@@ -1,6 +1,6 @@
 .products {
   @apply w-[80vw] mt-10 pb-10 grid grid-cols-1 gap-10;
   @apply md:grid-cols-2;
-  @apply lg:grid-cols-3 lg:w-[90vw];
-  @apply xl:grid-cols-4;
+  @apply lg:grid-cols-3 lg:w-[95vw] lg:gap-6;
+  @apply xl:grid-cols-4 xl:w-[90vw] xl:gap-10;
 }
