@@ -48,6 +48,7 @@ const AuthForm = () => {
         router.replace("/");
       } else {
         setDisplayError(true);
+        setIsLoading(false);
         setErrorMessage(response.error);
       }
     } else {
@@ -67,8 +68,10 @@ const AuthForm = () => {
       if (data.status === "failed") {
         setDisplayError(true);
         setErrorMessage(data.message);
+        setIsLoading(false);
       } else {
         setIsLogin(true);
+        setIsLoading(false);
       }
     }
   };
