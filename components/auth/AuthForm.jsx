@@ -71,8 +71,6 @@ const AuthForm = () => {
         setIsLogin(true);
       }
     }
-
-    setIsLoading(false);
   };
 
   return (
