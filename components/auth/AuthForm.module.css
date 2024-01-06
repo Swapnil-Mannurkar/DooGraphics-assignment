@@ -1,0 +1,49 @@
+.authForm {
+  @apply w-[30%] h-[60%] m-auto flex flex-col justify-center items-center 
+  rounded-md shadow-[2px_2px_2px_2px_#00000055] gap-6 relative;
+}
+
+.authForm h1 {
+  @apply text-2xl font-bold;
+}
+
+.inputField {
+  @apply w-[75%] flex flex-col relative;
+}
+
+.eyeIcon {
+  @apply absolute bottom-2.5 right-4;
+}
+
+.authForm input {
+  @apply w-full bg-transparent border-[#00000055] border-2 px-2 py-1 rounded-md focus:outline-none;
+}
+
+.actionButton {
+  @apply w-[75%] bg-[#FEE2CA] font-bold rounded-md py-1.5 shadow-[2px_2px_5px_1px_#00000055];
+}
+
+.loginSignupToggle {
+  @apply cursor-pointer text-center pt-6;
+}
+
+.textBlue {
+  color: blue;
+}
+
+.errorMessage {
+  color: red;
+  text-align: center;
+  position: absolute;
+  top: 71%;
+}
+
+@media screen and (max-width: 500px) {
+  .authForm {
+    @apply w-[80%] h-[65%];
+  }
+
+  .errorMessage {
+    top: 68%;
+  }
+}
