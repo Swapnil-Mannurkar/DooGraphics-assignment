@@ -37,21 +37,7 @@ const AuthForm = () => {
     const enteredUsername = usernameRef.current.value;
     const enteredPassword = passwordRef.current.value;
 
-    if (isLogin) {
-      const response = await signIn("credentials", {
-        redirect: false,
-        username: enteredUsername.trim(),
-        password: enteredPassword.trim(),
-      });
-
-      if (!response.error) {
-        router.replace("/");
-      } else {
-        setDisplayError(true);
-        setIsLoading(false);
-        setErrorMessage(response.error);
-      }
-    } else {
+    if (!isLogin) {
       const response = await fetch("/api/auth/signup", {
         method: "POST",
         headers: {
@@ -69,10 +55,24 @@ const AuthForm = () => {
         setDisplayError(true);
         setErrorMessage(data.message);
         setIsLoading(false);
+        return;
       } else {
         setIsLogin(true);
-        setIsLoading(false);
       }
+    }
+
+    const response = await signIn("credentials", {
+      redirect: false,
+      username: enteredUsername.trim(),
+      password: enteredPassword.trim(),
+    });
+
+    if (!response.error) {
+      router.replace("/");
+    } else {
+      setDisplayError(true);
+      setIsLoading(false);
+      setErrorMessage(response.error);
     }
   };
 
