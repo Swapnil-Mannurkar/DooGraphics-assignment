@@ -1,0 +1,47 @@
+.shippingForm {
+  @apply w-full flex flex-col justify-center items-center px-20;
+}
+
+.shippingForm label {
+  @apply mb-1 font-bold;
+}
+
+.shippingForm input {
+  @apply h-full p-1.5 border border-black rounded-lg flex items-center;
+}
+
+.contactDetails {
+  @apply w-full flex flex-col;
+}
+
+.contactDetails label {
+  @apply mt-5;
+}
+
+.paymentDetails {
+  @apply w-full mt-5 flex flex-col;
+}
+
+.paymentDetailsColumn {
+  @apply w-full mt-5 flex justify-between;
+}
+
+.paymentDetailsRow {
+  @apply w-[45%] flex flex-col;
+}
+
+.action {
+  @apply w-full pt-6 pb-8 flex justify-end;
+}
+
+.shippingForm input[type="number"]::-webkit-inner-spin-button,
+.shippingForm input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.action button:disabled {
+  @apply border-gray-700 text-gray-700;
+  @apply hover:bg-gray-700 hover:cursor-not-allowed;
+}

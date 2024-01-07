@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Modal.module.css";
-import { BarLoader, ClipLoader, GridLoader, HashLoader } from "react-spinners";
+import { BarLoader } from "react-spinners";
 
 const Modal = (props) => {
   return (
@@ -8,7 +8,7 @@ const Modal = (props) => {
       <div className={styles.modalBg} />
       <div className={styles.modalContent}>
         {props.children}
-        <BarLoader />
+        {props.type === "success" ? null : <BarLoader />}
       </div>
     </>
   );

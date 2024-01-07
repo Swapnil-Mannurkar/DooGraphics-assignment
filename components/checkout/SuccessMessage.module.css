@@ -1,0 +1,8 @@
+.success {
+  @apply w-full text-5xl text-green-500;
+  @apply flex flex-col justify-center items-center gap-6;
+}
+
+.success h2 {
+  @apply text-4xl;
+}
