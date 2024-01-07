@@ -7,10 +7,26 @@
   @apply text-4xl font-extrabold pt-8;
 }
 
-.cart {
+.cart,
+.emptyCart {
   @apply w-[90%] h-4/5 bg-white rounded-2xl shadow-md pt-4;
   @apply md:w-[70%];
   @apply xl:w-[55%] h-[85%];
+}
+
+.emptyCart {
+  @apply flex flex-col justify-center items-center gap-6;
+}
+
+.emptyCart h2 {
+  @apply text-2xl;
+}
+
+.emptyCart button {
+  @apply text-[#ff7b00] px-4 py-2 border-2 border-solid border-[#ff7b00];
+  @apply rounded-md font-bold uppercase text-sm;
+  @apply hover:bg-[#ff7b00] hover:text-white;
+  @apply xl:text-base;
 }
 
 .cartDetails {

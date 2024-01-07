@@ -1,8 +1,23 @@
 import React from "react";
 import styles from "./Cart.module.css";
 import CartItem from "./CartItem";
+import Link from "next/link";
 
 const Cart = ({ cart }) => {
+  if (cart.items.length === 0) {
+    return (
+      <main className={styles.main}>
+        <h1>CART</h1>
+        <div className={styles.emptyCart}>
+          <h2>No items added to the cart!</h2>
+          <button>
+            <Link href={"/"}>EXPLORE PRODUCTS</Link>
+          </button>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className={styles.main}>
       <h1>CART</h1>
