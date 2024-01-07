@@ -9,3 +9,18 @@
 body {
   @apply bg-orange-50;
 }
+
+.errorPage {
+  @apply w-full h-4/5  flex flex-col justify-center items-center gap-4 uppercase;
+}
+
+.errorPage h2 {
+  @apply text-3xl font-bold;
+}
+
+.errorPage button {
+  @apply text-[#ff7b00] px-4 py-2 border-2 border-solid border-[#ff7b00];
+  @apply rounded-md font-bold uppercase text-sm;
+  @apply hover:bg-[#ff7b00] hover:text-white;
+  @apply xl:text-base;
+}
