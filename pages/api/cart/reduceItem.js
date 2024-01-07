@@ -26,9 +26,15 @@ const handler = async (req, res) => {
     product.quantity -= 1;
     cart.totalPrice -= product.price;
 
-    cart.items[itemIndex] = product;
+    if (product.quantity === 0) {
+      cart.items = cart.items.filter((item) => item.id !== product.id);
 
-    await users.updateOne({ _id: username }, { $set: { cart: cart } });
+      await users.updateOne({ _id: username }, { $set: { cart: cart } });
+    } else {
+      cart.items[itemIndex] = product;
+
+      await users.updateOne({ _id: username }, { $set: { cart: cart } });
+    }
 
     return res
       .status(200)
