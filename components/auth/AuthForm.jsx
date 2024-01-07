@@ -69,6 +69,7 @@ const AuthForm = () => {
 
     if (!response.error) {
       router.replace("/");
+      setIsLoading(false);
     } else {
       setDisplayError(true);
       setIsLoading(false);

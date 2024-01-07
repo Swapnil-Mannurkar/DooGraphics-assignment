@@ -27,8 +27,9 @@ const Product = ({ product, toggleLoading }) => {
       username: data.user.name,
     });
 
-    if (response) {
-      toggleLoading();
+    toggleLoading();
+
+    if (response.ok) {
       router.replace("/cart");
     }
   };

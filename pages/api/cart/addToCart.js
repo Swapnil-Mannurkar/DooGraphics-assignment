@@ -24,7 +24,8 @@ const handler = async (req, res) => {
     const user = await users.findOne({ _id: username });
 
     let cart = await user.cart;
-    cart.totalPrice += Number(product.price);
+    cart.totalPrice = Number(cart.totalPrice) + Number(product.price);
+    cart.totalItems = Number(cart.totalItems) + 1;
 
     const existingProductIndex = await cart.items.findIndex(
       (prod) => prod.id === product.id

@@ -34,6 +34,10 @@ const Cart = ({ cart }) => {
         </div>
         <div className={styles.checkout}>
           <h4>
+            TOTAL ITEMS:{" "}
+            <span className={styles.totalPrice}>${cart.totalItems}</span>
+          </h4>
+          <h4>
             TOTAL PRICE:{" "}
             <span className={styles.totalPrice}>
               ${cart.totalPrice.toFixed(2)}
