@@ -1,34 +1,29 @@
 .navigationBar {
-  @apply w-full h-[10%] flex bg-[#FF7B00] font-bold justify-between items-center px-48;
+  @apply w-full py-4 text-white bg-[#ff7b00] sticky z-40;
+  @apply flex flex-col items-center justify-around;
+  @apply md:flex-row;
 }
 
 .logo {
-  @apply text-[2.25rem] font-extrabold;
+  @apply text-3xl font-extrabold;
 }
 
 .navList {
-  @apply flex gap-8 items-center text-xl;
+  @apply flex items-center gap-8 font-bold text-lg mt-2 uppercase;
+  @apply md:mt-0 lg:gap-12;
 }
 
 .navList button {
-  @apply w-24 border-2 border-black uppercase text-sm py-1 rounded-[0.3rem]
-  hover:border-white hover:text-white;
+  @apply px-4 py-0.5 text-base border-2 border-white rounded-md uppercase;
+  @apply hover:bg-orange-50 hover:text-[#ff7b00];
 }
 
-@media screen and (max-width: 500px) {
-  .navigationBar {
-    @apply px-4;
-  }
+.cart {
+  @apply relative;
+}
 
-  .logo {
-    @apply text-2xl;
-  }
-
-  .navList {
-    @apply gap-4 text-lg;
-  }
-
-  .navList button {
-    @apply w-20 text-xs;
-  }
+.totalItems {
+  @apply text-sm font-bold px-1.5 bg-[red] text-white;
+  @apply absolute top-[-40%] right-[-45%]  rounded-full;
+  @apply flex justify-center items-center;
 }

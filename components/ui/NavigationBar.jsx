@@ -6,42 +6,53 @@ import { signOut, useSession } from "next-auth/react";
 
 const NavigationBar = () => {
   const router = useRouter();
-  const [username, setusername] = useState();
-  const { data: session, status } = useSession();
+  const { data, status } = useSession();
+
+  const pathname = router.pathname;
+
+  // useEffect(() => {
+  //   if (data) {
+  //     fetch(`/api/cart/getTotalItems?username=${data.user.name}`)
+  //       .then((response) => response.json())
+  //       .then((result) => localStorage.setItem("totalItems", result.totalItems))
+  //       .catch((err) => console.log(err));
+  //   }
+  // }, [router]);
 
   const loginLogoutClickHandler = (event) => {
     event.preventDefault();
 
-    if (session) {
+    if (data) {
       signOut({ redirect: true });
     } else {
       router.replace("/auth");
     }
   };
 
-  useEffect(() => {
-    if (session) {
-      const extractedName = session.user.name;
-      setusername(extractedName.toLowerCase());
-    }
-  }, [session]);
+  const itemStyle = { color: "black", fontWeight: "bolder" };
 
   return (
     <nav className={styles.navigationBar}>
       <Link href="/">
         <h1 className={styles.logo}>E-COMMERCE</h1>
       </Link>
-      <div className={styles.navList}>
-        {session && (
+      <ul className={styles.navList}>
+        <li style={pathname === "/" ? itemStyle : {}}>
+          <Link href={"/"}>Home</Link>
+        </li>
+        {data && (
           <>
-            <div>Hello {username}!</div>
-            <Link href={"/cart"}>Cart</Link>
+            <li style={pathname === "/cart" ? itemStyle : {}}>
+              <Link href={"/cart"}>Cart</Link>
+            </li>
           </>
         )}
-        <button onClick={loginLogoutClickHandler}>
-          {session ? "Logout" : "Login"}
-        </button>
-      </div>
+        <li>
+          <button onClick={loginLogoutClickHandler}>
+            {data ? "Logout" : "Login"}
+          </button>
+        </li>
+      </ul>
     </nav>
   );
 };
