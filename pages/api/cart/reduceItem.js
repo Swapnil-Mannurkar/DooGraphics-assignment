@@ -24,7 +24,7 @@ const handler = async (req, res) => {
     );
 
     product.quantity -= 1;
-    cart.totalPrice -= product.price;
+    cart.totalPrice = cart.totalPrice - product.price;
 
     if (product.quantity === 0) {
       cart.items = cart.items.filter((item) => item.id !== product.id);

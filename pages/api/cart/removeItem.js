@@ -19,7 +19,9 @@ const handler = async (req, res) => {
 
     const cart = await user.cart;
 
-    cart.totalPrice = cart.totalPrice - product.price * product.quantity;
+    cart.totalPrice =
+      Number(cart.totalPrice) -
+      Number(product.price) * Number(product.quantity);
 
     cart.items = cart.items.filter((item) => item.id !== product.id);
 
