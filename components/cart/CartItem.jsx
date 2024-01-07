@@ -4,7 +4,11 @@ import Image from "next/image";
 import { ImBin2 } from "react-icons/im";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
-import { addToCartHelper, reduceItemHelper } from "@/lib/cart";
+import {
+  addToCartHelper,
+  reduceItemHelper,
+  removeItemHelper,
+} from "@/lib/cart";
 import Modal from "../ui/Modal";
 
 const CartItem = ({ item }) => {
@@ -27,7 +31,7 @@ const CartItem = ({ item }) => {
       response = await reduceItemHelper({ item, username });
     } else if (action === "remove") {
       setMessage("Removing item from the cart");
-      
+      response = await removeItemHelper({ item, username });
     } else {
       return;
     }
