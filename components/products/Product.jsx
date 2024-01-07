@@ -23,7 +23,7 @@ const Product = ({ product, toggleLoading }) => {
     const product = { id, title, price, image, quantity: 1 };
 
     const response = await addToCartHelper({
-      product,
+      item: product,
       username: data.user.name,
     });
 
