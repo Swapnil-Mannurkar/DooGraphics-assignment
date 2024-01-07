@@ -36,7 +36,9 @@ const ProductDetails = ({ product }) => {
         <div className={styles.productDetail}>
           <h3>$ {price}</h3>
           <p>{description}</p>
-          <button onClick={addToCartHandler}>Add to cart</button>
+          {status === "authenticated" && (
+            <button onClick={addToCartHandler}>Add to cart</button>
+          )}
         </div>
       </div>
     </main>

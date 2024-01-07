@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import { addToCartHelper } from "@/lib/cart";
 
-const Product = ({ product }) => {
+const Product = ({ product, toggleLoading }) => {
   const router = useRouter();
   const { data, status } = useSession();
 
@@ -19,6 +19,7 @@ const Product = ({ product }) => {
   };
 
   const addToCartHandler = async () => {
+    toggleLoading();
     const product = { id, title, price, image, quantity: 1 };
 
     const response = await addToCartHelper({
@@ -29,6 +30,7 @@ const Product = ({ product }) => {
     if (response) {
       router.replace("/cart");
     }
+    toggleLoading();
   };
 
   return (

@@ -1,10 +1,10 @@
 .modalBg {
-  @apply h-[100%] w-[100vw] absolute top-0 left-0 bg-[#000000cc] z-10;
+  @apply h-[100%] w-[100%] absolute top-0 left-0 bg-[#000000cc] z-10;
 }
 
 .modalContent {
   @apply font-bold text-3xl text-center uppercase text-gray-700 absolute;
-  @apply z-20 bg-white flex justify-center items-center rounded-md;
+  @apply z-20 bg-white flex flex-col justify-center items-center gap-8 rounded-md;
   @apply w-[70%] h-[40%] top-[25%] left-[15%];
   @apply lg:w-[50%] lg:h-[50%] lg:top-[25%] lg:left-[25%];
 }
