@@ -13,6 +13,15 @@ export default CartPage;
 export const getServerSideProps = async (context) => {
   const session = await getServerSession(context.req, context.res, authOptions);
 
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/auth",
+        permanent: false,
+      },
+    };
+  }
+
   try {
     const client = await connectDatabase();
 

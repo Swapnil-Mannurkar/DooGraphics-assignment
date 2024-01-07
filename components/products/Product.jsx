@@ -19,11 +19,6 @@ const Product = ({ product }) => {
   };
 
   const addToCartHandler = async () => {
-    if (status === "unauthenticated") {
-      router.replace("/auth");
-      return;
-    }
-
     const product = { id, title, price, image, quantity: 1 };
 
     const response = await addToCartHelper({
