@@ -19,7 +19,7 @@ const Product = ({ product, toggleLoading }) => {
   };
 
   const addToCartHandler = async () => {
-    toggleLoading();
+    toggleLoading(true);
     const product = { id, title, price, image, quantity: 1 };
 
     const response = await addToCartHelper({
@@ -27,10 +27,8 @@ const Product = ({ product, toggleLoading }) => {
       username: data.user.name,
     });
 
-    toggleLoading();
-
     if (response.ok) {
-      router.replace("/cart");
+      toggleLoading(false);
     }
   };
 

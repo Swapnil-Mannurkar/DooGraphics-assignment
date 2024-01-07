@@ -1,6 +1,7 @@
 .main {
-  @apply w-full h-[85%] flex flex-col items-center gap-6;
-  @apply xl:justify-center xl:gap-4;
+  @apply w-full h-[70%] flex flex-col items-center gap-4;
+  @apply md:h-[80%];
+  @apply xl:justify-center xl:h-[85%];
 }
 
 .main h1 {

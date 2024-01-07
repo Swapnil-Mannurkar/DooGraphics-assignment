@@ -6,8 +6,8 @@ import Modal from "../ui/Modal";
 const ProductsPage = ({ products }) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const toggleLoadingHandler = () => {
-    setIsLoading(!isLoading);
+  const toggleLoadingHandler = (value) => {
+    setIsLoading(value);
   };
 
   return (

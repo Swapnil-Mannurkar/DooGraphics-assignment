@@ -1,5 +1,6 @@
 .shippingForm {
-  @apply w-full flex flex-col justify-center items-center px-20;
+  @apply w-full flex flex-col justify-center items-center px-6;
+  @apply xl:px-24;
 }
 
 .shippingForm label {

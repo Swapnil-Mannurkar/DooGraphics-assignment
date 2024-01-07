@@ -1,6 +1,9 @@
 .authForm {
-  @apply w-[30%] h-[60%] m-auto bg-white flex flex-col justify-center items-center 
+  @apply w-[80%] h-[50%] m-auto bg-white flex flex-col justify-center items-center 
   rounded-md shadow-[2px_2px_2px_2px_#00000055] gap-6 relative;
+  @apply md:w-[55%] md:h-[70%];
+  @apply lg:w-[40%];
+  @apply xl:w-[30%] xl:h-[65%];
 }
 
 .authForm h1 {
@@ -37,14 +40,4 @@
   text-align: center;
   position: absolute;
   top: 71%;
-}
-
-@media screen and (max-width: 500px) {
-  .authForm {
-    @apply w-[80%] h-[65%];
-  }
-
-  .errorMessage {
-    top: 68%;
-  }
 }
