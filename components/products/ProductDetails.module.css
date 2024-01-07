@@ -15,6 +15,10 @@
   @apply p-8 flex justify-center bg-white shadow-lg rounded-md;
 }
 
+.image img {
+  @apply w-auto h-auto;
+}
+
 .productDetail {
   @apply flex flex-col justify-center items-center gap-4;
 }

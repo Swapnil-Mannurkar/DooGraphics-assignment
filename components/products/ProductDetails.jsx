@@ -41,7 +41,7 @@ const ProductDetails = ({ product }) => {
         <h2>{title}</h2>
         <div className={styles.product}>
           <div className={styles.image}>
-            <Image src={image} alt={title} width={200} height={200} />
+            <Image src={image} alt={title} width={200} height={200} priority />
           </div>
           <div className={styles.productDetail}>
             <h3>$ {price}</h3>
