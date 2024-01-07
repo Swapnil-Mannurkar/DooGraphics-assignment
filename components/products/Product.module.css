@@ -37,7 +37,12 @@
 }
 
 .action button {
-  @apply w-60 px-2 py-1 mt-2 border-2 border-solid border-gray-800;
-  @apply text-gray-800 rounded-md font-bold uppercase;
-  @apply hover:bg-gray-600 hover:text-white;
+  @apply w-60 px-2 py-1 mt-2 border-2 border-solid border-black;
+  @apply text-black rounded-md font-bold uppercase;
+  @apply hover:bg-black hover:text-white hover:cursor-pointer;
+}
+
+.action button:disabled {
+  @apply text-gray-600 border-gray-600;
+  @apply hover:bg-gray-600 hover:text-white hover:cursor-not-allowed;
 }

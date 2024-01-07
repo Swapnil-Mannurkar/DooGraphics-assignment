@@ -1,4 +1,4 @@
 .main {
   @apply w-full h-full flex justify-center items-center bg-[#ffffffbb];
-  @apply absolute z-20;
+  @apply fixed top-0 left-0 z-20;
 }

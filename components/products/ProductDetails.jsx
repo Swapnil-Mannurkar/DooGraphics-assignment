@@ -46,9 +46,12 @@ const ProductDetails = ({ product }) => {
           <div className={styles.productDetail}>
             <h3>$ {price}</h3>
             <p>{description}</p>
-            {status === "authenticated" && (
-              <button onClick={addToCartHandler}>Add to cart</button>
-            )}
+            <button
+              onClick={addToCartHandler}
+              disabled={status !== "authenticated"}
+            >
+              Add to cart
+            </button>
           </div>
         </div>
       </main>

@@ -50,9 +50,12 @@ const Product = ({ product, toggleLoading }) => {
         </div>
       </div>
       <div className={styles.action}>
-        {status === "authenticated" && (
-          <button onClick={addToCartHandler}>Add to cart</button>
-        )}
+        <button
+          onClick={addToCartHandler}
+          disabled={status !== "authenticated"}
+        >
+          Add to cart
+        </button>
       </div>
     </main>
   );
