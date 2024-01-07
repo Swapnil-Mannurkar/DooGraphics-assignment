@@ -5,7 +5,8 @@
   @apply lg:grid-cols-[1fr_2fr_1.5fr];
 }
 
-.cartItem h2 {
+.cartItem h6 {
+  @apply text-base;
   @apply hidden text-justify;
   @apply lg:flex lg:pr-8;
 }

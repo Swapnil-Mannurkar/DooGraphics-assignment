@@ -7,22 +7,21 @@
   @apply text-4xl font-extrabold pt-8;
 }
 
-.cart,
-.emptyCart {
+.cart {
   @apply w-[90%] h-4/5 bg-white rounded-2xl shadow-md pt-4;
   @apply md:w-[70%];
   @apply xl:w-[55%] h-[85%];
 }
 
-.emptyCart {
+.cart {
   @apply flex flex-col justify-center items-center gap-6;
 }
 
-.emptyCart h2 {
+.cart h2 {
   @apply text-2xl;
 }
 
-.emptyCart button {
+.cart button {
   @apply text-[#ff7b00] px-4 py-2 border-2 border-solid border-[#ff7b00];
   @apply rounded-md font-bold uppercase text-sm;
   @apply hover:bg-[#ff7b00] hover:text-white;
@@ -50,16 +49,8 @@
 .checkout h4 {
   @apply font-bold text-center;
   @apply lg:text-xl;
-  @apply xl:text-2xl;
 }
 
 .totalPrice {
   @apply text-[#FF7B00];
-}
-
-.checkout button {
-  @apply text-[#ff7b00] px-2 py-1 border-2 border-solid border-[#ff7b00];
-  @apply rounded-md font-bold uppercase text-sm;
-  @apply hover:bg-[#ff7b00] hover:text-white;
-  @apply xl:text-base;
 }

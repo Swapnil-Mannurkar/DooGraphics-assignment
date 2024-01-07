@@ -59,7 +59,7 @@ const CartItem = ({ item }) => {
             priority
           />
         </div>
-        <h2>{item.title}</h2>
+        <h6>{item.title}</h6>
         <div className={styles.actions}>
           <div className={styles.quantityActions}>
             <p
