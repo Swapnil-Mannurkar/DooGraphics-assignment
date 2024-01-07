@@ -1,0 +1,38 @@
+.cartItem {
+  @apply w-full h-fit py-4 grid items-center;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: 1px solid black;
+  @apply lg:grid-cols-[1fr_2fr_1.5fr];
+}
+
+.cartItem h2 {
+  @apply hidden text-justify;
+  @apply lg:flex lg:pr-8;
+}
+
+.image {
+  @apply flex justify-center;
+}
+
+.image img {
+  @apply w-[4.1rem] h-[4.1rem];
+}
+
+.actions {
+  @apply grid grid-cols-[1.2fr_1fr] place-items-center;
+  @apply lg:grid-cols-2;
+}
+
+.quantityActions {
+  @apply w-full text-xl flex justify-center items-center gap-4;
+  @apply md:gap-5;
+}
+
+.quantityControl {
+  @apply w-1/5 bg-orange-100 text-center rounded-lg;
+  @apply hover:cursor-pointer;
+}
+
+.delete {
+  @apply text-[red] text-xl hover:cursor-pointer;
+}

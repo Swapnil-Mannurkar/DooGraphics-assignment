@@ -54,7 +54,7 @@ const Product = ({ product }) => {
         </div>
       </div>
       <div className={styles.action}>
-        {status !== "authenticated" && (
+        {status === "authenticated" && (
           <button onClick={addToCartHandler}>Add to cart</button>
         )}
       </div>
