@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ImBin2 } from "react-icons/im";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
-import { addToCartHelper } from "@/lib/cart";
+import { addToCartHelper, reduceItemHelper } from "@/lib/cart";
 import Modal from "../ui/Modal";
 
 const CartItem = ({ item }) => {
@@ -13,22 +13,32 @@ const CartItem = ({ item }) => {
   const { data, status } = useSession();
   const [isLoading, setIsLoading] = useState(false);
 
-  const addToCartHandler = async () => {
-    setMessage("Adding item to cart...");
+  const clickHandler = async (action) => {
     setIsLoading(true);
 
-    const product = { ...item };
-    product.quantity = 1;
+    let response;
+    const username = data.user.name;
 
-    const response = await addToCartHelper({
-      product,
-      username: data.user.name,
-    });
-
-    if (response) {
-      router.replace("/cart");
-      setIsLoading(false);
+    if (action === "increase") {
+      setMessage("Adding item to the cart...");
+      response = await addToCartHelper({ item, username });
+    } else if (action === "decrease") {
+      setMessage("Reducing item from the cart");
+      response = await reduceItemHelper({ item, username });
+    } else if (action === "remove") {
+      setMessage("Removing item from the cart");
+      
+    } else {
+      return;
     }
+
+    if (response.ok) {
+      router.replace("/cart");
+    }
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
   };
 
   return (
@@ -51,13 +61,24 @@ const CartItem = ({ item }) => {
         <h2>{item.title}</h2>
         <div className={styles.actions}>
           <div className={styles.quantityActions}>
-            <p className={styles.quantityControl}>-</p>
+            <p
+              className={styles.quantityControl}
+              onClick={() => clickHandler("decrease")}
+            >
+              -
+            </p>
             <p>{item.quantity}</p>
-            <p className={styles.quantityControl} onClick={addToCartHandler}>
+            <p
+              className={styles.quantityControl}
+              onClick={() => clickHandler("increase")}
+            >
               +
             </p>
           </div>
-          <ImBin2 className={styles.delete} />
+          <ImBin2
+            className={styles.delete}
+            onClick={() => clickHandler("remove")}
+          />
         </div>
       </div>
     </>
