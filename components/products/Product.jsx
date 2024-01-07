@@ -28,9 +28,9 @@ const Product = ({ product, toggleLoading }) => {
     });
 
     if (response) {
+      toggleLoading();
       router.replace("/cart");
     }
-    toggleLoading();
   };
 
   return (

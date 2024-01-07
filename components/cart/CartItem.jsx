@@ -37,12 +37,9 @@ const CartItem = ({ item }) => {
     }
 
     if (response.ok) {
+      setIsLoading(false);
       router.replace("/cart");
     }
-
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
   };
 
   return (
