@@ -1,4 +1,4 @@
-This is a simple E-Commerce project build using Next.js, TailwindCSS and MongoDB. In this project, users can browse the products without logging in and user needs create an account to purchase the product.
+This is a simple E-Commerce project build using [Next.js](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/) and [MongoDB](https://www.mongodb.com/). In this project, users can browse the products without logging in and user needs create an account to purchase the product.
 
 Once the user logs in, the user can add the product to the cart. In the cart, the user can increase or decrease an item and he/she can also remove the item from the cart.
 
@@ -18,7 +18,7 @@ User can place an order by click on "checkout" button available in the cart and 
 
 5. Once all the dependencies are installed, type "npm run dev" to start the development server.
 
-### Note: Please do not close the terminal.
+#### Note: Please do not close the terminal.
 
 6. Open your browser and type "http://localhost:3000" to view the project.
 
@@ -28,7 +28,7 @@ User can place an order by click on "checkout" button available in the cart and 
 
 2. Click on "Click here" button from the bottom of the login form.
 
-### Note: In step 3, username must be unique and password must contain atleast 8 character includes one number, one uppercase and one lowercase.
+#### Note: In step 3, username must be unique and password must contain atleast 8 character includes one number, one uppercase and one lowercase.
 
 3. Choose your username and password and click on "SIGN UP" button available in the form.
 
@@ -44,7 +44,7 @@ User can place an order by click on "checkout" button available in the cart and 
 
 # Add items to cart
 
-### Note: You need to login into your account to add product to the cart.
+#### Note: You need to login into your account to add product to the cart.
 
 1. In the home page, you can explore products by navigating to different pages using the navigation section present at the bottom of the page.
 
