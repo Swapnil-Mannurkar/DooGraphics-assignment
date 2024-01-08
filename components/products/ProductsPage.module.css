@@ -1,6 +1,27 @@
 .products {
-  @apply w-[80vw] mt-10 pb-10 grid grid-cols-1 gap-10;
+  @apply w-4/5 mt-10 pb-10 grid grid-cols-1 gap-10 items-center;
   @apply md:grid-cols-2;
-  @apply lg:grid-cols-3 lg:w-[95vw] lg:gap-6;
-  @apply xl:grid-cols-4 xl:w-[90vw] xl:gap-10;
+  @apply lg:grid-cols-4 lg:w-[95vw] lg:gap-6;
+  @apply xl:grid-cols-4 xl:w-[90vw] xl:h-2/3 xl:gap-10 xl:pb-0;
+}
+
+.pagination {
+  @apply w-full pb-10 text-orange-500;
+}
+
+.pagination ul {
+  @apply w-full flex justify-center items-center gap-6 font-bold;
+  @apply lg:text-xl;
+}
+
+.pagination ul button:disabled {
+  @apply text-gray-500 hover:cursor-not-allowed;
+}
+
+.pagination ul li {
+  @apply rounded-full px-2 hover:cursor-pointer;
+}
+
+.active {
+  @apply bg-orange-500 text-white font-bold;
 }

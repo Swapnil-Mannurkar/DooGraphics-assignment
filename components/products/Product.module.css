@@ -1,5 +1,5 @@
 .main {
-  @apply w-full bg-white shadow-md flex flex-col rounded-md pb-6;
+  @apply w-full h-fit bg-white shadow-md flex flex-col rounded-md pb-6;
   @apply hover:scale-105 hover:cursor-pointer;
 }
 
@@ -34,6 +34,8 @@
 
 .action {
   @apply flex justify-center;
+  @apply lg:px-4;
+  @apply xl:px-0;
 }
 
 .action button {
