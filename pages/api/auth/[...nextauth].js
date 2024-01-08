@@ -5,7 +5,7 @@ import { verifyPassword } from "@/lib/auth";
 
 export const authOptions = {
   secret: "thequickbrownfox",
-  site: "https://swapnil-mannurkar-doographics.netlify.app/",
+  site: "https://swapnil-mannurkar-doographics.vercel.app/",
   providers: [
     Credentials({
       async authorize(credentials) {
