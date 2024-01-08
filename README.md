@@ -12,7 +12,7 @@ User can place an order by click on "checkout" button available in the cart and 
 
 3. After cloning the repo, type "cd DooGraphics-assignment" to navigate into the folder.
 
-### Note: Before proceeding to step 4, Please make sure you have [node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed in your system.
+#### Note: Before proceeding to step 4, Please make sure you have [node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed in your system.
 
 4. Now type "npm install" to download and install all the required dependencies for this poroject.
 
