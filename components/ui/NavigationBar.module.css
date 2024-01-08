@@ -18,6 +18,14 @@
   @apply hover:bg-orange-50 hover:text-[#ff7b00];
 }
 
+.navList li a {
+  @apply flex items-center gap-1;
+}
+
+.navList li svg {
+  @apply text-lg;
+}
+
 .cart {
   @apply relative;
 }

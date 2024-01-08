@@ -3,6 +3,8 @@ import styles from "./NavigationBar.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { signOut, useSession } from "next-auth/react";
+import { AiFillHome } from "react-icons/ai";
+import { FaShoppingCart } from "react-icons/fa";
 
 const NavigationBar = () => {
   const router = useRouter();
@@ -38,12 +40,18 @@ const NavigationBar = () => {
       </Link>
       <ul className={styles.navList}>
         <li style={pathname === "/" ? itemStyle : {}}>
-          <Link href={"/"}>Home</Link>
+          <Link href={"/"}>
+            <AiFillHome />
+            Home
+          </Link>
         </li>
         {data && (
           <>
             <li style={pathname === "/cart" ? itemStyle : {}}>
-              <Link href={"/cart"}>Cart</Link>
+              <Link href={"/cart"}>
+                <FaShoppingCart />
+                Cart
+              </Link>
             </li>
           </>
         )}
