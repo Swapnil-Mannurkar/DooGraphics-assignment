@@ -1,5 +1,7 @@
 This is a simple E-Commerce project build using [Next.js](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/) and [MongoDB](https://www.mongodb.com/). In this project, users can browse the products without logging in and user needs create an account to purchase the product.
 
+The authentication process is handled using [NextAuth.js](https://next-auth.js.org/).
+
 Once the user logs in, the user can add the product to the cart. In the cart, the user can increase or decrease an item and he/she can also remove the item from the cart.
 
 User can place an order by click on "checkout" button available in the cart and that button takes user to the checkout form where he/she has to enter his/her fullname, address, phone number and card details. When the user clicks on "Place order" button after filling all the details, the order will be placed successfully and a success message will be displayed.
