@@ -11,7 +11,7 @@ const AuthenticationPage = () => {
         <title>Authentication</title>
         <meta
           name="description"
-          content="Login or signup to keep your tasks at one place!"
+          content="Login or signup to start shopping now!"
         />
       </Head>
       <AuthForm />

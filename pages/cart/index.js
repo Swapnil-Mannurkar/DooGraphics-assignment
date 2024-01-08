@@ -3,9 +3,21 @@ import React from "react";
 import Cart from "@/components/cart/Cart";
 import { authOptions } from "../api/auth/[...nextauth]";
 import { connectDatabase, usersCollection } from "@/lib/db";
+import Head from "next/head";
 
 const CartPage = ({ cart }) => {
-  return <Cart cart={cart} />;
+  return (
+    <>
+      <Head>
+        <title>Cart</title>
+        <meta
+          name="description"
+          content="Check your and place your order now!"
+        />
+      </Head>
+      <Cart cart={cart} />
+    </>
+  );
 };
 
 export default CartPage;
